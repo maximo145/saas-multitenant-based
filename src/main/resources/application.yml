@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: saas-shared-schema
+  datasource:
+    url: jdbc:postgresql://localhost:25432/inventory_pos
+    username: dbhuex
+    password: admin123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    open-in-view: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      data-locations: classpath:sql/data.sql
+      mode: always
+
+app:
+  jwt:
+    secret: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCkfqbMytBJS
+    expiration: 9000000
